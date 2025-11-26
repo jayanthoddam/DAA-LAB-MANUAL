@@ -17,13 +17,13 @@ int main() {
     cout << "Enter capacity of knapsack: ";
     cin >> capacity;
 
-    // Calculate value/weight ratio
+    
     float ratio[100];
     for (int i = 0; i < n; i++) {
         ratio[i] = value[i] / weight[i];
     }
 
-    // Sort by ratio in descending order (simple bubble sort)
+    
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
             if (ratio[j] < ratio[j + 1]) {
@@ -36,7 +36,7 @@ int main() {
 
     float maxValue = 0;
 
-    // Greedy selection
+
     for (int i = 0; i < n; i++) {
         if (capacity == 0)
             break;
@@ -55,3 +55,4 @@ int main() {
 
     return 0;
 }
+
